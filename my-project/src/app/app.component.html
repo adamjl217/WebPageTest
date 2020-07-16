@@ -1,95 +1,285 @@
 <style>
-  :host {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-      "Segoe UI Symbol";
-    font-size: 14px;
-    color: #333;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+body {
+  font-family: 'Nunito', 'DM Sans', sans-serif;
+  color: #000;
+  font-size: 16px;
+  line-height: 20px;
+}
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: 8px 0;
-  }
+h1 {
+  margin-top: 20px;
+  margin-bottom: 12px;
+  font-size: 52px;
+  line-height: 1.2;
+  font-weight: 700;
+}
 
-  p {
-    margin: 0;
-  }
+h2 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 700;
+}
 
-  .spacer {
-    flex: 1;
-  }
+h3 {
+  margin-top: 24px;
+  margin-bottom: 12px;
+  font-size: 32px;
+  line-height: 1.3;
+  font-weight: 700;
+}
 
-  .toolbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    background-color: #19b6d2;
-    color: white;
-    font-weight: 600;
-  }
+h4 {
+  margin-top: 20px;
+  margin-bottom: 12px;
+  font-size: 28px;
+  line-height: 1.4;
+  font-weight: 700;
+}
 
-  .toolbar img {
-    margin: 0 16px;
-  }
+h5 {
+  margin-top: 20px;
+  margin-bottom: 12px;
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 700;
+}
 
-  .toolbar #github-logo {
-    height: 40px;
-    margin: 0 16px;
-  }
+h6 {
+  margin-top: 16px;
+  margin-bottom: 12px;
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 700;
+}
 
-  .toolbar #github-logo:hover {
-    opacity: 0.8;
-  }
-  
-  .content {
-    display: flex;
-    margin: 82px auto 32px;
-    padding: 0 16px;
-    max-width: 960px;
-    flex-direction: column;
-    align-items: center;
-  }
+p {
+  margin-bottom: 16px;
+  font-size: 18px;
+  line-height: 1.6;
+}
 
-  svg.material-icons {
-    height: 24px;
-    width: auto;
-  }
+a {
+  color: #000;
+  width: 50%;
+  height: 100%;
+}
 
-  svg.material-icons:not(:last-child) {
-    margin-right: 8px;
-  }
+.nav-link {
+  font-family: 'Space Mono', sans-serif;
+  color: #3a63d4;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  padding-right: 10px;
+  padding-left: 10px;
+}
 
-  .card svg.material-icons path {
-    fill: #888;
-  }
+.navbar {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 auto;
+  -ms-flex: 0 auto;
+  flex: 0 auto;
+  background-color: transparent;
+}
 
-  .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 16px;
-  }
+.header-background {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  min-height: 500px;
+  margin-bottom: 50px;
+  padding-bottom: 70px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto auto;
+  grid-template-rows: auto auto;
+  background-color: #e5ecff;
+}
 
-  .card {
+.headline-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.button {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 20px 30px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  border-radius: 3px;
+  background-color: #3a63d4;
+  font-family: 'Space Mono', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.subhead {
+  margin-top: 0px;
+  margin-bottom: 15px;
+  font-family: 'Space Mono', sans-serif;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 400;
+  text-align: center;
+}
+
+.site-title {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  font-family: Nunito, sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.body-container {
+  padding-top: 0px;
+}
+
+.menu-button {
+  color: #3a63d4;
+}
+
+.hero {
+  display: block;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.flex-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.hero-image-mask {
+  width: 100%;
+  margin-left: 40px;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0.5 auto;
+  -ms-flex: 0 0.5 auto;
+  flex: 0 0.5 auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: 50% 50%;
+  object-position: 50% 50%;
+}
+
+.hero-overlay {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 90vh;
+  max-height: 780px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-position: 0px 0px, 50% 50%;
+}
+
+.centered-container {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: center;
+}
+
+.site-navigation {
+  padding-top: 20px;
+}
+
+.heading {
+  margin-bottom: 8px;
+  font-family: Nunito, sans-serif;
+  font-size: 52px;
+  line-height: 1.2;
+  font-weight: 900;
+  text-align: center;
+}
+
+.navbar-container {
+  margin-right: auto;
+  margin-left: auto;
+  list-style: none;
+  width: 100%;
+  height: 90px;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.card {
     border-radius: 4px;
     border: 5px solid #eee;
     background-color: #fafafa;
-    height: 100px;
-    width: 200px;
     margin: 0 8px 16px;
     padding: 16px;
+    opacity: 0.85;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -97,181 +287,205 @@
     transition: all 0.2s ease-in-out;
     line-height: 24px;
   }
-
-  .card-container .card:not(:last-child) {
-    margin-right: 0;
+  
+  .nav-left {
+    text-align: left; 
   }
 
-  .card.card-small {
-    height: 16px;
-    width: 168px;
+  .nav-right {
+    text-align: right; 
+    position:relative; 
+    top:-45px;
   }
 
-  .card-container .card:not(.highlight-card) {
-    cursor: pointer;
+@media screen and (max-width: 991px) {
+  .navbar {
+    padding-top: 0px;
   }
-
-  .card-container .card:not(.highlight-card):hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  .header-background {
+    height: auto;
+    min-height: 400px;
+    padding-bottom: 50px;
   }
-
-  .card-container .card:not(.highlight-card):hover .material-icons path {
-    fill: rgb(105, 103, 103);
-  }
-
-  .card.highlight-card {
-    background-color: #1976d2;
-    color: white;
-    font-weight: 600;
-    border: none;
-    width: auto;
-    min-width: 30%;
-    position: relative;
-  }
-
-  .card.card.highlight-card span {
-    margin-left: 60px;
-  }
-
-
-  a,
-  a:visited,
-  a:hover {
-    color: #1976d2;
-    text-decoration: none;
-  }
-
-  a:hover {
-    color: #125699;
-  }
-
-  .terminal {
-    position: relative;
-    width: 80%;
-    max-width: 600px;
-    border-radius: 6px;
-    padding-top: 45px;
-    margin-top: 8px;
-    overflow: hidden;
-    background-color: rgb(15, 15, 16);
-  }
-
-  .terminal::before {
-    content: "\2022 \2022 \2022";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 4px;
-    background: rgb(58, 58, 58);
-    color: #c2c3c4;
+  .navbar-container {
     width: 100%;
-    font-size: 2rem;
-    line-height: 0;
-    padding: 14px 0;
-    text-indent: 4px;
+    min-width: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
   }
+}
 
-  .terminal pre {
-    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
-    color: white;
-    padding: 0 1rem 1rem;
-    margin: 0;
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 40px;
+    line-height: 1.2;
   }
-
-  .circle-link {
-    height: 40px;
-    width: 40px;
-    border-radius: 40px;
-    margin: 8px;
-    background-color: white;
-    border: 1px solid #eeeeee;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    transition: 1s ease-out;
+  h2 {
+    font-size: 28px;
+    line-height: 1.2;
   }
-
-  .circle-link:hover {
-    transform: translateY(-0.25rem);
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  h3 {
+    font-size: 24px;
+    line-height: 1.4;
   }
-
-  footer {
-    margin-top: 8px;
-    display: flex;
-    align-items: center;
-    line-height: 20px;
+  h4 {
+    font-size: 20px;
+    line-height: 1.4;
   }
-
-  footer a {
-    display: flex;
-    align-items: center;
+  h5 {
+    font-size: 16px;
+    line-height: 1.4;
   }
-
-
-  /* Responsive Styles */
-  @media screen and (max-width: 767px) {
-
-.card-container>*:not(.circle-link),
-.terminal {
-  width: 100%;
+  h6 {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  p {
+    font-size: 16px;
+  }
+  .navbar {
+    padding-top: 0px;
+  }
+  .header-background {
+    height: auto;
+    padding-bottom: 40px;
+  }
+  .headline-container {
+    text-align: center;
+  }
+  .button {
+    padding: 15px 20px;
+    font-size: 18px;
+  }
+  .subhead {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+  .body-container {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .flex-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .hero-image-mask {
+    margin-right: 0px;
+    margin-left: 0px;
+    -webkit-box-ordinal-group: 0;
+    -webkit-order: -1;
+    -ms-flex-order: -1;
+    order: -1;
+  }
+  .hero-overlay {
+    padding: 40px 20px;
+  }
+  .heading {
+    font-size: 40px;
+  }
 }
 
-.card:not(.highlight-card) {
-  height: 16px;
-  margin: 8px 0;
+@media screen and (max-width: 479px) {
+  h1 {
+    font-size: 36px;
+    line-height: 1.1;
+  }
+  h2 {
+    line-height: 1.2;
+  }
+  h3 {
+    line-height: 1.3;
+  }
+  h4 {
+    line-height: 1.4;
+  }
+  h5 {
+    line-height: 1.4;
+  }
+  .header-background {
+    height: auto;
+    padding-right: 0px;
+    padding-bottom: 30px;
+    padding-left: 0px;
+  }
+  .headline-container {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .site-title {
+    margin-top: 14px;
+    margin-bottom: 14px;
+  }
+  .centered-container {
+    text-align: left;
+  }
+  .heading {
+    font-size: 36px;
+  }
 }
 
-.card.highlight-card span {
-  margin-left: 72px;
-}
-
-svg#rocket-smoke {
-  right: 120px;
-  transform: rotate(-5deg);
-}
-}
-
-@media screen and (max-width: 575px) {
-svg#rocket-smoke {
-  display: none;
-  visibility: hidden;
-}
-}
   </style>
 
-<!-- Toolbar -->
-<div class="toolbar" role="banner">
-  <img width="40" alt="Adam Lahey" src="assets/img/adamlahey.png" />
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Adam Lahey Webpage</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+</head>
 
-  <div class="spacer"></div>
-  <a aria-label="Adam Lahey on Github" target="_blank" rel="noopener" href="https://github.com/adamjl217"
-    title="GithubLink">
-    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="50.0pt" height="50.0pt"
-      viewBox="0 0 560.000000 560.000000" preserveAspectRatio="xMidYMid meet">
-      <g transform="translate(0,560) scale(0.09,-0.09)">
-        <path
-          d="M2571 4839 c-733 -82 -1361 -525 -1676 -1182 -488 -1019 -73 -2233  941 -2749 60 -31 154 -72 209 -93 116 -43 165 -43 202 0 22 25 23 33 23 242  l0 215 -27 -6 c-16 -4 -86 -9 -158 -12 -152 -7 -232 7 -328 59 -95 50 -147  110 -211 239 -61 126 -113 194 -190 251 -111 83 -131 118 -78 138 107 42 291 -57 387 -207 106 -165 229 -232 404 -221 108 7 211 40 211 68 0 39 43 145 81 201 45 66 57 56 -99 83 -497 85 -752 358 -803 858 -26 260 24 468 158 647 l48 65 -17 65 c-33 127 -16 355 34 465 12 27 14 27 78 22 119 -10 299 -82 454 -181 l52 -33 110 23 c276 58 562 58 838 0 l110 -23 52 33 c156 100 335 171 456 181 l66 6 28 -84 c37 -114 45 -299 17 -405 l-19 -71 49 -63 c164 -218 207 -519 122 -856 -95 -376 -368 -595 -817 -656 -49 -7 -88 -16 -88 -19 0 -4 11 -20 24 -36 39 -47 74 -125 90 -206 13 -61 16 -145 16 -416 0 -338 0 -340 23 -366 37 -43 86 -43 202 0 1143 427 1676 1745 1150 2842 -296 618 -865 1045 -1550 1164 -139 24 -440 33 -574 18z" />
-      </g>
-    </svg>
-  </a>
-</div>
-
-<br/>
-<br/>
-<br/>
-
-<main class="container-fluid">
-  <div class="card">
-    <div class="card-header">
-      <h1>{{ title }}</h1>
-      <h2>Actively seeking new front-end employment</h2>
+<body class="body">
+    <div class="header-background">
+        <div data-collapse="medium" data-animation="default" data-duration="300" role="banner" style="white-space: nowrap; width: 100%; height: 90px;"
+            class="navbar site-navigation">
+            <div class="navbar-container">
+                <nav role="navigation" class="nav-menu">
+                  <ul class="nav-left">
+                      <img src="/assets/img/adamlahey.png" style="height: 50px; width: 50px;" />
+                      <a id="site-title" class="site-title">Adam Lahey</a>
+                      <a href="https://github.com/adamjl217" 
+                      id="nav-link" class="nav-link" style="max-width: 940px;">Home</a>
+                      <a href="https://github.com/adamjl217" 
+                      id="nav-link" class="nav-link" style="max-width: 940px;">About</a>
+                      <a href="https://github.com/adamjl217" 
+                      id="nav-link" class="nav-link" style="max-width: 940px;">Resume</a>
+                      <a href="https://github.com/adamjl217" 
+                      id="nav-link" class="nav-link" style="max-width: 940px;">Contact</a>
+                  </ul>
+                  <ul class="nav-right">
+                      <a href="https://github.com/adamjl217" 
+                      id="nav-link" class="nav-link" style="max-width: 940px;">Github</a>
+                      <a href="https://www.linkedin.com/in/adamlahey/" 
+                      id="nav-link" class="nav-link" style="max-width: 940px;">LinkedIn</a>
+                  </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="headline-container"> 
+            <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap" rel="stylesheet">
+            <h1 id="headline" class="heading">Developer extraordinaire.</h1>
+            <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+            <h5 id="subline" class="subhead">Problem solver. Innovator. Developer. Tester.</h5>
+        </div>
     </div>
-  </div>
-</main>
+
+
+
+    <div class="body-container w-container" opacity="0.3">
+        <main class="container-fluid">
+            <div class="card">
+              <div class="card-header">
+                  <h4>My Story</h4>
+                  <h6>I'm currently employed by SR Technologies (SRT) as a Software Developer in Test. One of my main responsibilities includes the testing a C# .NET application using Windows Application Driver, which is driven by Selenium. The backend is handled by a General Purpose Processing unit running on Linux, which we SSH into when analyzing performance (using 'tops'), network activity, and the server status (server running in GO). I also ensure the PostGRES database is secure and without vulnerabilities. The data running on the ITAR compliant systems is extensive and must be handled by stored procedures.  </h6>
+                  <h6>In my role at Revature as a Software Developer in Test, I tested a web application using Javascript's Jasmine and Protractor, with a Java-to-Hibernate database middle and backend layer that used JUnit and Cucumber tests. The website's data-retrieval API was frequently tested using Postman to safeguard basic REST processing. </h6>
+                  <h6>In my experience, test case and code coverage are common statistics to ensure code reliability while keeping a maintainable source. I've worked as a part of an AGILE and scrum team, logging defects using Microsoft's Team Foundation Server (TFS; similar to Azure). A daily activity in both cases involved taking bug reports with logs and translating them into actionable items by task or user story. Test-driven development (TDD) in a continuous integration environment has been a constant. </h6>
+                  <h6>Email: adamjl217@gmail.com </h6>
+                </div>
+            </div>
+          </main>
+    </div>
+</body>
 
 
 <router-outlet></router-outlet>

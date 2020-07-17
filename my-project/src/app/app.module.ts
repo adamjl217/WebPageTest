@@ -7,7 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
-import { ResumeComponent } from './resume/resume.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -17,7 +16,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ContactComponent,
     HomeComponent,
     AboutComponent,
-    ResumeComponent,
     PageNotFoundComponent
   ],
   imports: [
